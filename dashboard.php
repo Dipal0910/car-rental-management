@@ -20,11 +20,15 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 <body class="bg-light">
     <div class="container mt-5">
-        <div class="card shadow-sm p-4">
-            <h1 class="mb-3">Welcome, <?php echo $_SESSION["name"]; ?>!</h1>
-            <p class="lead">You are logged in as a <strong><?php echo $_SESSION["role"]; ?></strong>.</p>
-            <a href="logout.php" class="btn btn-danger mt-3">Logout</a>
-        </div>
+    <div class="card shadow-sm p-4">
+    <h1 class="mb-3">Welcome, <?php echo $_SESSION["name"]; ?>!</h1>
+    <p class="lead">You are logged in as a <strong><?php echo $_SESSION["role"]; ?></strong>.</p>
+    
+    <!-- Added button -->
+    <a href="book_car.php" class="btn btn-primary mt-3 me-2">Book a Car</a>
+
+    <a href="logout.php" class="btn btn-danger mt-3">Logout</a>
+</div>
     </div>
 </body>
 </html>

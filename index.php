@@ -1,20 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light"> <!-- Default to light mode -->
+<html lang="en" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>CarRental - Rent Your Ride</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/car1.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>CarRental - Rent Your Ride</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+                  url('images/car1.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 130px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .testimonials {
+      background-color: #fff;
+      padding: 60px 20px;
+    }
+
+    .testimonial-card {
+      border-left: 5px solid #0d6efd;
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #212529;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -41,49 +97,49 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
-    <h1 class="display-4">Find Your Perfect Ride</h1>
+    <h1>Find Your Perfect Ride</h1>
     <p class="lead">Affordable, Reliable, and Just a Click Away.</p>
-    <a href="signup.php" class="btn btn-warning btn-lg mt-3">Book Now</a>
+    <a href="signup.php" class="btn btn-warning btn-lg mt-3 px-4">Book Now</a>
   </div>
 </section>
 
-<!-- Car Cards Section -->
+<!-- Available Cars -->
 <section class="container py-5">
-  <h2 class="text-center mb-4">Available Cars</h2>
+  <h2 class="text-center fw-bold mb-4">Explore Our Fleet</h2>
   <div class="row" id="car-list">
 
     <!-- Car 1 -->
     <div class="col-md-4">
-      <div class="card mb-4">
-        <img src="images/car1.jpg" class="card-img-top" alt="Car 1">
+      <div class="card mb-4 shadow-sm">
+        <img src="images/car100.jpg" class="card-img-top" alt="Toyota Camry">
         <div class="card-body">
-          <h5 class="card-title">Toyota Camry</h5>
-          <p class="card-text">$50/day · Automatic · Petrol</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
+          <h5 class="card-title fw-semibold">Toyota Camry</h5>
+          <p class="card-text text-muted">$50/day · Automatic · Petrol</p>
+          <a href="#" class="btn btn-outline-primary w-100">Rent Now</a>
         </div>
       </div>
     </div>
 
     <!-- Car 2 -->
     <div class="col-md-4">
-      <div class="card mb-4">
-        <img src="images/car2.jpg" class="card-img-top" alt="Car 2">
+      <div class="card mb-4 shadow-sm">
+        <img src="images/car200.jpg" class="card-img-top" alt="Honda Civic">
         <div class="card-body">
-          <h5 class="card-title">Honda Civic</h5>
-          <p class="card-text">$45/day · Automatic · Hybrid</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
+          <h5 class="card-title fw-semibold">Honda Civic</h5>
+          <p class="card-text text-muted">$45/day · Automatic · Hybrid</p>
+          <a href="#" class="btn btn-outline-primary w-100">Rent Now</a>
         </div>
       </div>
     </div>
 
     <!-- Car 3 -->
     <div class="col-md-4">
-      <div class="card mb-4">
-        <img src="images/car3.jpg" class="card-img-top" alt="Car 3">
+      <div class="card mb-4 shadow-sm">
+        <img src="images/car300.jpg" class="card-img-top" alt="Ford Mustang">
         <div class="card-body">
-          <h5 class="card-title">Ford Mustang</h5>
-          <p class="card-text">$80/day · Manual · Petrol</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
+          <h5 class="card-title fw-semibold">Ford Mustang</h5>
+          <p class="card-text text-muted">$80/day · Manual · Petrol</p>
+          <a href="#" class="btn btn-outline-primary w-100">Rent Now</a>
         </div>
       </div>
     </div>
@@ -91,9 +147,40 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section class="testimonials text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-5">What Our Customers Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>“Super smooth booking experience. The car was clean and in perfect condition!”</p>
+          <small class="text-muted">- Arjun K.</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>“Great pricing and friendly customer support. Highly recommend CarRental!”</p>
+          <small class="text-muted">- Simran P.</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>“I booked a car in under 5 minutes. The website is easy and intuitive.”</p>
+          <small class="text-muted">- Naveen R.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
-<footer class="text-center p-3 bg-dark text-white">
-  &copy; <?php echo date("Y"); ?> CarRental. All rights reserved.
+<footer class="text-center py-4 mt-5">
+  <p class="mb-1">&copy; <?php echo date("Y"); ?> <strong>CarRental</strong>. All rights reserved.</p>
+  <p class="small">
+    <a href="contact.php">Contact</a> |
+    <a href="about.php">About Us</a>
+  </p>
 </footer>
 
 <!-- Bootstrap JS and Theme Toggle Script -->
