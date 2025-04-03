@@ -14,7 +14,7 @@ session_start();
             background-color: #f8f9fa;
         }
         .hero-section {
-            background: url('images/car2.jpg') center center/cover no-repeat;
+            background: url('images/carbackground.jpg') center center/cover no-repeat;
             height: 300px;
             display: flex;
             align-items: center;

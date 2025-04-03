@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #f1f5f9;
         }
         .contact-header {
-            background: url('images/car1.jpg') center center/cover no-repeat;
+            background: url('images/carbackground.jpg') center center/cover no-repeat;
             height: 280px;
             display: flex;
             align-items: center;
